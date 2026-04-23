@@ -1,0 +1,21 @@
+node_modules/
+dist/
+dist-ssr/
+
+# Env — never commit
+.env
+.env.local
+server/.env
+
+# Secure files — upload manually to server, never commit
+public/Nayeem_Hasan_CV.pdf
+server/data/messages.json
+
+# Logs
+npm-debug.log*
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
