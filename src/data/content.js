@@ -54,7 +54,7 @@ export const experience = [
     company: 'Technovative Solutions LTD',
     role: 'Senior Software Engineer',
     dates: 'May 2024 — Present',
-    location: '🇧🇩 Dhaka',
+    location: { code: 'bd gb', label: 'Remote' },
     current: true,
     stack: ['Python', 'FastAPI', 'Django', 'Celery', 'PostgreSQL', 'Docker', 'SPIRE', 'Envoy', 'Azure'],
     bullets: [
@@ -71,7 +71,7 @@ export const experience = [
     company: 'Shajgoj Limited',
     role: 'Software Engineer',
     dates: 'Mar 2022 — Apr 2024',
-    location: '🇧🇩 Dhaka',
+    location: { code: 'bd', label: 'Dhaka' },
     current: false,
     stack: ['PHP', 'Laravel', 'Redis', 'MySQL', 'Node.js', 'MongoDB', 'Apache Solr', 'Neo4j'],
     bullets: [
@@ -89,7 +89,7 @@ export const experience = [
     company: 'Walletmix Limited',
     role: 'Full Stack Developer',
     dates: 'Feb 2021 — Feb 2022',
-    location: '🇧🇩 Dhaka',
+    location: { code: 'bd', label: 'Dhaka' },
     current: false,
     stack: ['PHP', 'Laravel', 'PostgreSQL', 'Redis', 'Vue.js', 'Docker'],
     bullets: [
@@ -104,7 +104,7 @@ export const experience = [
     company: 'Japan Marketing & Consultancy',
     role: 'Full Stack Developer',
     dates: 'Jul 2019 — Jan 2021',
-    location: '🇧🇩 / 🇯🇵 Remote',
+    location: { code: 'bd jp', label: 'Remote' },
     current: false,
     stack: ['PHP', 'Laravel', 'Vue.js', 'MySQL', 'AWS', 'Docker'],
     bullets: [
@@ -118,7 +118,7 @@ export const experience = [
     company: 'Orange Business Development',
     role: 'Junior Software Engineer',
     dates: 'Oct 2018 — Jun 2019',
-    location: '🇧🇩 Dhaka',
+    location: { code: 'bd', label: 'Dhaka' },
     current: false,
     stack: ['PHP', 'Laravel', 'Vue.js', 'MySQL'],
     bullets: [
@@ -131,7 +131,7 @@ export const experience = [
     company: 'Dream 71 Bangladesh Limited',
     role: 'Junior Software Engineer',
     dates: 'Jan 2018 — Sep 2018',
-    location: '🇧🇩 Dhaka',
+    location: { code: 'bd', label: 'Dhaka' },
     current: false,
     stack: ['PHP', 'Laravel', 'Vue.js', 'MySQL'],
     bullets: [

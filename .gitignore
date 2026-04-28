@@ -5,11 +5,9 @@ dist-ssr/
 # Env — never commit
 .env
 .env.local
-server/.env
 
-# Secure files — upload manually to server, never commit
+# CV — upload manually to public/ on your server, never commit
 public/Nayeem_Hasan_CV.pdf
-server/data/messages.json
 
 # Logs
 npm-debug.log*

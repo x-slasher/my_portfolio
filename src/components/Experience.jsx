@@ -8,7 +8,15 @@ function ExpItem({ job }) {
     <div className={`exp-item reveal ${job.current ? 'current' : ''}`}>
       <div className="exp-meta">
         <div className="exp-dates">{job.dates}</div>
-        <div className="exp-loc">{job.location}</div>
+        <div className="exp-loc">
+          {job.location.code.split(' ').map((c, i) => (
+            <span key={c} style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              {i > 0 && <span style={{ color: 'var(--text-faint)', margin: '0 2px' }}>/</span>}
+              <span className={`fi fi-${c}`} style={{ borderRadius: '2px', fontSize: '12px' }} />
+            </span>
+          ))}
+          <span> {job.location.label}</span>
+        </div>
       </div>
 
       <div className="exp-body">
