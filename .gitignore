@@ -7,7 +7,7 @@ dist-ssr/
 .env.local
 
 # CV — upload manually to public/ on your server, never commit
-public/Nayeem_Hasan_CV.pdf
+# public/Nayeem_Hasan_CV.pdf
 
 # Logs
 npm-debug.log*
