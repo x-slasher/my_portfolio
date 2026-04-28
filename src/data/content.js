@@ -39,7 +39,7 @@ export const profile = {
     { key: 'remote',     value: 'yes',                  green: true },
     { key: 'experience', value: '8+ years' },
     { key: 'edu',        value: 'B.Sc CSE' },
-    { key: 'university', value: 'East West Univ.' },
+    { key: 'university', value: 'East West Uiversity' },
     { key: 'graduated',  value: 'Dec 2017' },
     { key: 'languages',  value: 'Bengali · English' },
     { key: 'english',    value: 'Full professional' },
@@ -152,6 +152,7 @@ export const projects = [
     description:
       'Backend platform enabling privacy-preserving ML workflows across European hospitals. Integrated the FL Core and HL7 FHIR pipelines for multimodal clinical datasets. Uses SPIRE/Envoy mTLS zero-trust architecture across distributed hospital Data Hub nodes.',
     tags: ['Python', 'FastAPI', 'HL7 FHIR', 'DICOM', 'SPIRE', 'Azure'],
+    link: 'https://www.fluteproject.eu'
   },
   {
     id: 'trumpet',
@@ -163,6 +164,7 @@ export const projects = [
     description:
       'Built the entire cloud platform powering Researcher, Data Owner, and Governance dashboards. Designed the on-prem Data Owner Node covering dataset ingestion, FHIR-based data publishing, and study approvals. Validated across NSCLC, HNC & SBRT clinical use cases.',
     tags: ['Python', 'Django', 'PostgreSQL', 'Celery', 'Federated ML', 'RBAC'],
+    link: 'https://trumpetproject.eu',
   },
   {
     id: 'shajgoj',
@@ -174,15 +176,65 @@ export const projects = [
     description:
       'Full backend and API redevelopment — 2× traffic capacity with 4× peak load architecture, 65% API response time improvement, and zero-downtime migration of 2M+ records. Built graph-based recommendation engine with Neo4j and Solr-powered search.',
     tags: ['Laravel', 'Redis', 'Neo4j', 'Apache Solr', 'Node.js', 'MySQL'],
+    link: 'https://shop.shajgoj.com',
+  },
+  {
+    id: 'bangladesh-national-portal',
+    icon: '🏛️',
+    name: 'Bangladesh National Portal',
+    type: 'Gov · a2i',
+    typeStyle: 'default',
+    subtitle: 'National e-Governance Digital Platform',
+    description:
+      "Contributed to Bangladesh's largest government digital platform, connecting 45,000+ government offices across all divisions, districts, upazilas and unions under a single centralised portal framework. The platform acts as a one-stop information gateway for citizens and government employees — eliminating the need to navigate multiple sources for public services. Delivered features to streamline website launches with essential onboarding information as part of the a2i (Access to Information) initiative.",
+    tags: ['PHP', 'Laravel', 'Vue.js', 'MySQL', 'e-Governance'],
+    link: 'https://bangladesh.gov.bd',
+  },
+  {
+    id: 'shobar-dhaka',
+    icon: '🏙️',
+    name: 'Shobar Dhaka',
+    type: 'Civic Tech',
+    typeStyle: 'default',
+    subtitle: 'Dhaka North City Corporation — Citizen App',
+    description:
+      'Built the backend and mobile APIs for a one-stop citizen engagement platform serving Dhaka North City Corporation (DNCC). The platform allows 241K+ registered citizens to access DNCC services, report issues in their area directly to city administration, and track resolutions. Implemented OTP-based registration, geo-location tracking, complaint workflow management, and real-time issue reporting across the city\'s entire service network. Ensured full backward compatibility for the Robi Alpha subscriber platform mobile API integrations.',
+    tags: ['PHP', 'Laravel', 'PostgreSQL', 'Redis', 'Mobile API', 'Vue.js'],
+    link: 'https://www.shobardhaka.online',
+  },
+  {
+    id: 'cholbe-robi',
+    icon: '📱',
+    name: 'Cholbe Robi',
+    type: 'Fintech · Telecom',
+    typeStyle: 'default',
+    subtitle: 'Social Digital Entrepreneur Recharge Platform',
+    description:
+      'Maintained and extended the payment gateway infrastructure powering Cholbe Robi — a social entrepreneur recharge app by Robi Axiata that enables anyone to become a digital micro-entrepreneur by recharging Robi/Airtel numbers and earning a 1.75% commission per transaction. Supported 2,200+ brand promoters and was recognised with an Honourable Mention at the Bangladesh Innovation Award 2018. The platform onboarded 6,000+ Union Digital Centre (UDC) entrepreneurs across Bangladesh to deliver Robi services to rural communities.',
+    tags: ['PHP', 'Laravel', 'MySQL', 'Payment Gateway', 'Redis', 'Mobile API'],
+    link: '',
+  },
+  {
+    id: 'walletmix-gateway',
+    icon: '💳',
+    name: 'Walletmix Payment Gateway',
+    type: 'Fintech',
+    typeStyle: 'default',
+    subtitle: 'B2B Open Banking Payment Infrastructure',
+    description:
+      'Maintained and extended a homegrown payment gateway platform providing core payment infrastructure services to Bangladeshi businesses. The platform integrates with banks and mobile financial services to enable online transactions for merchants across Bangladesh. Handled bug fixes, feature rollouts, API stability, and system reliability — supporting payment flows for clients including Robi Axiata (Cholbe Robi), DNCC (Shobar Dhaka), and other fintech partners.',
+    tags: ['PHP', 'Laravel', 'PostgreSQL', 'MySQL', 'Docker', 'Redis'],
+    link: '',
   },
 ]
+
 
 export const skills = {
   groups: [
     {
       label: 'Backend Languages',
       items: [
-        { name: 'Python',             level: 'Expert',    pct: 95 },
+        { name: 'Python',             level: 'Expert',    pct: 90 },
         { name: 'PHP (Laravel)',       level: 'Expert',    pct: 92 },
         { name: 'JavaScript / Node.js',level: 'Proficient',pct: 78 },
       ],
@@ -190,9 +242,9 @@ export const skills = {
     {
       label: 'Frameworks & APIs',
       items: [
-        { name: 'FastAPI',    level: 'Expert',    pct: 94 },
-        { name: 'Django + DRF',level: 'Expert',   pct: 90 },
-        { name: 'Express.js', level: 'Proficient',pct: 72 },
+        { name: 'FastAPI',    level: 'Expert',    pct: 84 },
+        { name: 'Django + DRF',level: 'Expert',   pct: 75 },
+        { name: 'Express.js', level: 'Proficient',pct: 80 },
       ],
     },
     {
