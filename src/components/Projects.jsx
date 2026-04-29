@@ -14,7 +14,7 @@ function ProjectCard({ project, delay }) {
     >
       <div className="project-card-top">
         <div className="project-icon">{project.icon}</div>
-        <span className={`project-type ${project.typeStyle === 'eu' ? 'eu' : ''}`}>
+        <span className={`project-type ${project.typeStyle !== 'default' ? project.typeStyle : ''}`}>
           {project.type}
         </span>
       </div>

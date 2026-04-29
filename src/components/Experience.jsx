@@ -15,7 +15,7 @@ function ExpItem({ job }) {
               <span className={`fi fi-${c}`} style={{ borderRadius: '2px', fontSize: '12px' }} />
             </span>
           ))}
-          <span> {job.location.label}</span>
+          <span>{job.location.label}</span>
         </div>
       </div>
 
@@ -35,16 +35,15 @@ function ExpItem({ job }) {
 
         {job.extraBullets.length > 0 && (
           <>
-            <button className="exp-toggle" onClick={() => setExpanded(v => !v)}>
-              <span>{expanded ? 'show less' : 'show more'}</span>
-              <span className="exp-toggle-icon" style={{ transform: expanded ? 'rotate(180deg)' : 'none', display: 'inline-block', transition: 'transform 0.3s' }}>▾</span>
-            </button>
-
             <div className="exp-extra" style={{ maxHeight: expanded ? '600px' : '0', overflow: 'hidden', transition: 'max-height 0.4s ease' }}>
               <ul className="exp-bullets" style={{ marginTop: '8px' }}>
                 {job.extraBullets.map((b, i) => <li key={i}>{b}</li>)}
               </ul>
             </div>
+            <button className="exp-toggle" onClick={() => setExpanded(v => !v)}>
+              <span>{expanded ? 'show less' : 'show more'}</span>
+              <span className="exp-toggle-icon" style={{ transform: expanded ? 'rotate(180deg)' : 'none', display: 'inline-block', transition: 'transform 0.3s' }}>▾</span>
+            </button>
           </>
         )}
       </div>
