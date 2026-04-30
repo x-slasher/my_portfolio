@@ -30,7 +30,7 @@
    RESET
 ═══════════════════════════════════════ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html  { scroll-behavior: smooth; font-size: 16px; }
+html  { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
 body  {
   background: var(--bg);
   color: var(--text);
@@ -107,7 +107,6 @@ body::before {
   justify-content: space-between;
   border-bottom: 1px solid transparent;
   transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
-  overflow: hidden;
 }
 .navbar.scrolled {
   background: rgba(7,11,9,0.92);
@@ -302,12 +301,11 @@ section {
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: minmax(0, 1fr) 420px;
   gap: 56px;
   align-items: center;
   width: 100%;
   position: relative;
-  min-width: 0;
 }
 .hero-grid > div:first-child {
   min-width: 0;
@@ -361,8 +359,6 @@ section {
   letter-spacing: -3px;
   color: var(--text);
   margin-bottom: 20px;
-  max-width: 100%;
-  overflow-wrap: break-word;
 }
 .hero-name .accent { color: var(--green); }
 .hero-role {
@@ -383,9 +379,7 @@ section {
   line-height: 1.75;
   color: var(--text-mid);
   max-width: 520px;
-  width: 100%;
   margin-bottom: 44px;
-  overflow-wrap: break-word;
 }
 .hero-bio strong { color: var(--text); font-weight: 600; }
 .hero-ctas {
