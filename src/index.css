@@ -107,6 +107,7 @@ body::before {
   justify-content: space-between;
   border-bottom: 1px solid transparent;
   transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
+  overflow: hidden;
 }
 .navbar.scrolled {
   background: rgba(7,11,9,0.92);
@@ -127,6 +128,7 @@ body::before {
   cursor: pointer;
   background: none;
   border: none;
+  flex-shrink: 0;
 }
 .nav-logo::before {
   content: '>';
@@ -213,6 +215,7 @@ body::before {
   padding: 4px;
   background: none;
   border: none;
+  flex-shrink: 0;
 }
 .hamburger span {
   display: block;
@@ -262,6 +265,8 @@ section {
   padding: 100px 40px;
   max-width: 1140px;
   margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 .section-divider { border-top: 1px solid var(--border); }
 .section-header  {
@@ -285,6 +290,8 @@ section {
   max-width: 1140px;
   margin: 0 auto;
   overflow: visible;
+  width: 100%;
+  box-sizing: border-box;
 }
 .hero-glow {
   position: absolute;
@@ -300,6 +307,10 @@ section {
   align-items: center;
   width: 100%;
   position: relative;
+  min-width: 0;
+}
+.hero-grid > div:first-child {
+  min-width: 0;
 }
 .hero-badge {
   display: inline-flex;
@@ -350,6 +361,8 @@ section {
   letter-spacing: -3px;
   color: var(--text);
   margin-bottom: 20px;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 .hero-name .accent { color: var(--green); }
 .hero-role {
@@ -370,7 +383,9 @@ section {
   line-height: 1.75;
   color: var(--text-mid);
   max-width: 520px;
+  width: 100%;
   margin-bottom: 44px;
+  overflow-wrap: break-word;
 }
 .hero-bio strong { color: var(--text); font-weight: 600; }
 .hero-ctas {
@@ -597,6 +612,7 @@ section {
   padding: 2px 8px;
   border-radius: 20px;
   letter-spacing: 0.05em;
+  flex-shrink: 0;
 }
 .exp-company { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
 .exp-role    { font-family: var(--font-mono); font-size: 12px; color: var(--green-dim); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
@@ -837,17 +853,33 @@ footer {
    RESPONSIVE BREAKPOINTS
 ═══════════════════════════════════════ */
 
-/* Tablet landscape (960–1140px) */
+/* ══════════════════════════════════════
+   RESPONSIVE — tested screen sizes:
+   1920 · 1440 · 1280 · 1024 · 768
+   430  · 390  · 360  · 320
+══════════════════════════════════════ */
+
+/* Small desktop / large laptop (≤1140px) */
 @media (max-width: 1140px) {
   section { padding: 100px 28px; }
   .navbar { padding: 0 28px; }
+  #hero   { padding: 120px 28px 80px; }
   .hero-grid { gap: 40px; }
 }
 
-/* Tablet portrait (700–960px) */
+/* iPad landscape / small laptop (≤1024px) */
+@media (max-width: 1024px) {
+  .hero-grid     { grid-template-columns: 1fr 360px; gap: 32px; }
+  .about-grid    { grid-template-columns: 1fr 300px; gap: 40px; }
+  .projects-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .contact-grid  { grid-template-columns: 1fr 320px; gap: 40px; }
+}
+
+/* Tablet portrait (≤960px) */
 @media (max-width: 960px) {
   section { padding: 80px 28px; }
   .navbar { padding: 0 28px; }
+  #hero   { padding: 100px 28px 60px; }
   .hero-grid { grid-template-columns: 1fr; }
   .terminal-card { display: none; }
   .hero-name { font-size: clamp(48px, 10vw, 72px); }
@@ -866,32 +898,73 @@ footer {
 @media (max-width: 700px) {
   section { padding: 64px 16px; }
   .navbar { padding: 0 16px; }
+  #hero   { padding: 88px 16px 56px; }
   .nav-links, .nav-actions { display: none; }
   .hamburger { display: flex; }
-  .hero-name { font-size: clamp(44px, 14vw, 60px); letter-spacing: -2px; }
-  .hero-bio { font-size: 15px; }
-  .hero-ctas { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .hero-name { font-size: clamp(40px, 11vw, 56px); letter-spacing: -2px; }
+  .hero-bio  { font-size: 15px; max-width: 100%; }
+  .hero-ctas { flex-direction: column; align-items: stretch; gap: 10px; }
   .hero-ctas .btn-primary,
   .hero-ctas .btn-secondary,
   .hero-ctas .btn-cv { width: 100%; justify-content: center; }
   .hero-stats { gap: 16px; flex-wrap: wrap; }
   .hero-stat-num { font-size: 22px; }
   .section-title { font-size: 22px; }
+  .about-links { flex-direction: column; }
+  .about-link  { width: 100%; }
+  .info-row-val { max-width: 55%; word-break: break-word; text-align: right; }
   .projects-grid { grid-template-columns: 1fr; }
   .exp-timeline::before { left: 0; }
   .exp-item { padding-left: 20px; }
+  /* Fix flag alignment in flex row — remove top margin */
+  .exp-loc  { margin-top: 0; }
   .exp-company { font-size: 16px; }
+  .exp-stack { gap: 4px; }
   .contact-heading { font-size: 26px; }
+  .channel-value { font-size: 11px; word-break: break-all; overflow-wrap: break-word; }
+  .contact-channel { padding: 12px 14px; gap: 12px; }
+  .skills-tags { gap: 6px; }
+  .skills-tag  { font-size: 10px; padding: 5px 10px; }
   footer { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
   .footer-links { flex-wrap: wrap; justify-content: center; gap: 12px; }
+}
+
+/* iPhone 14 / common Android (≤430px) */
+@media (max-width: 430px) {
+  .hero-name  { font-size: clamp(36px, 10vw, 48px); letter-spacing: -1.5px; }
+  /* 4 stats → 2×2 grid so they never wrap 3+1 */
+  .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; }
+  .hero-stat-num { font-size: 22px; }
 }
 
 /* Small mobile (≤400px) */
 @media (max-width: 400px) {
   section { padding: 56px 14px; }
-  .hero-name { font-size: 40px; letter-spacing: -1px; }
+  #hero   { padding: 80px 14px 48px; }
+  .hero-name  { font-size: 34px; letter-spacing: -1px; }
   .hero-badge { font-size: 10px; padding: 5px 12px; }
-  .hero-stats { gap: 12px; }
+  .hero-stats { gap: 14px 12px; }
   .hero-stat-num { font-size: 20px; }
   .exp-item { padding-left: 16px; }
+  .stack-tag { font-size: 9px; padding: 2px 6px; }
+  .project-tag { font-size: 9px; padding: 2px 6px; }
+  .skills-tag  { font-size: 10px; padding: 4px 8px; }
+  .channel-value { font-size: 10px; }
+  .channel-icon  { width: 34px; height: 34px; }
+}
+
+/* Very small — older Androids (≤360px) */
+@media (max-width: 360px) {
+  section { padding: 48px 12px; }
+  #hero   { padding: 72px 12px 40px; }
+  .navbar { padding: 0 12px; }
+  .hero-name  { font-size: 30px; letter-spacing: -1px; }
+  .hero-badge { display: none; }
+  .section-num { display: none; }
+  .exp-company { font-size: 14px; }
+  .exp-role    { font-size: 10px; }
+  .project-name { font-size: 15px; }
+  .project-desc { font-size: 12px; }
+  .contact-heading { font-size: 22px; }
+  .form-input, .form-textarea { font-size: 12px; padding: 10px 12px; }
 }
