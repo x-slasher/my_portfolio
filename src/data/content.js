@@ -226,6 +226,18 @@ export const projects = [
     tags: ['PHP', 'Laravel', 'PostgreSQL', 'MySQL', 'Docker', 'Redis'],
     link: null,
   },
+  {
+    id: 'jobradar',
+    icon: '📡',
+    name: 'JobRadar',
+    type: 'Open Source',
+    typeStyle: 'opensource',
+    subtitle: 'Self-Hosted AI Job Aggregator',
+    description:
+      'Built a self-hosted job aggregator that automatically fetches listings daily from 8 platforms (We Work Remotely, Himalayas, Arc.dev, RemoteOK, Remotive, and more), deduplicates across sources, pre-filters by role and tech stack, and scores each job against the active CV using a keyword + tech-stack matching algorithm. Runs fully automated on a VPS via Celery Beat with a React dashboard for tracking applications.',
+    tags: ['Python', 'FastAPI', 'Celery', 'Redis', 'SQLite', 'React', 'Docker'],
+    link: 'https://github.com/x-slasher/jobradar',
+  },
 ]
 
 export const skills = {
