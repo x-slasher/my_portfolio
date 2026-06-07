@@ -16,9 +16,9 @@ export const profile = {
   available: true,
   remote: true,
   bio: [
-    `I'm a Senior Software Engineer based in Dhaka, Bangladesh, with over 8 years of experience designing and shipping production systems that prioritize performance, security, and reliability.`,
+    `I'm a Senior Software Engineer based in Dhaka, Bangladesh, with over 8 years of experience designing and shipping production systems that prioritise performance, security, and reliability.`,
     `My work spans EU healthcare AI research (federated learning platforms for cancer treatment workflows), fintech (payment gateways, mobile banking APIs), and e-commerce (high-traffic platforms serving millions of users).`,
-    `I'm currently leading the backend platform for FLUTE — an active EU research project enabling privacy-preserving ML workflows across distributed European hospitals without raw clinical data ever leaving local premises.`,
+    `I delivered backend infrastructure for FLUTE — an active EU research project enabling privacy-preserving ML workflows across distributed European hospitals without raw clinical data ever leaving local premises.`,
     `Outside of work, I enjoy deep-diving into distributed systems papers, exploring new backend frameworks, and contributing to projects that push what software can do for society.`,
   ],
   stats: [
@@ -39,7 +39,7 @@ export const profile = {
     { key: 'remote',     value: 'yes',                  green: true },
     { key: 'experience', value: '8+ years' },
     { key: 'education',        value: 'B.Sc CSE' },
-    { key: 'university', value: 'East West University' },  // fixed typo
+    { key: 'university', value: 'East West University' },
     { key: 'graduated',  value: 'Dec 2017' },
     { key: 'languages',  value: 'Bengali · English' },
     { key: 'english',    value: 'Full professional' },
@@ -53,17 +53,17 @@ export const experience = [
     id: 'technovative',
     company: 'Technovative Solutions LTD',
     role: 'Senior Software Engineer',
-    dates: 'May 2024 — Present',
+    dates: 'May 2024 — May 2026',
     location: { code: 'bd gb', label: 'Remote' },
-    current: true,
+    current: false,
     stack: ['Python', 'FastAPI', 'Django', 'Celery', 'PostgreSQL', 'Docker', 'SPIRE', 'Envoy', 'Azure'],
     bullets: [
-      'Led backend platform development for two EU federated learning research projects (FLUTE & TRUMPET), building cloud platforms and on-premises Data Hub/Data Owner Nodes enabling privacy-preserving AI workflows.',
+      'Engineered backend platform for two EU federated learning research projects (FLUTE & TRUMPET), building cloud platforms and on-premises Data Hub/Data Owner Nodes enabling privacy-preserving AI workflows.',
       'Built role-based dashboards and RESTful APIs serving Researchers, Data Hub operators, and Governance/Admin roles with audit-ready access control and study approval workflows.',
     ],
     extraBullets: [
       'Integrated HL7 FHIR and DICOM/Orthanc multimodal data pipelines standardising clinical datasets across hospital partners, supporting federated oncology workflows for NSCLC, HNC, and SBRT use cases.',
-      'Managed decentralised infrastructure security using mTLS with SPIRE/Envoy zero-trust architecture between cloud and on-premises hospital nodes.',
+      'Implemented decentralised infrastructure security using mTLS with SPIRE/Envoy zero-trust architecture between cloud and on-premises hospital nodes.',
     ],
   },
   {
@@ -122,7 +122,7 @@ export const experience = [
     current: false,
     stack: ['PHP', 'Laravel', 'Vue.js', 'MySQL'],
     bullets: [
-      'Contributed to an a2i initiative platform streamlining website launches. Delivered features per requirements, participating in cross-functional project meetings.',
+      'Contributed to an a2i initiative platform streamlining website launches. Delivered features per project requirements across cross-functional teams.',
     ],
     extraBullets: [],
   },
@@ -162,7 +162,7 @@ export const projects = [
     typeStyle: 'eu',
     subtitle: 'TRUstworthy Multi-site Privacy Enhancing Technologies',
     description:
-      'Built the entire cloud platform powering Researcher, Data Owner, and Governance dashboards. Designed the on-prem Data Owner Node covering dataset ingestion, FHIR-based data publishing, and study approvals. Validated across NSCLC, HNC & SBRT clinical use cases.',
+      'Built the cloud platform powering Researcher, Data Owner, and Governance dashboards. Designed the on-prem Data Owner Node covering dataset ingestion, FHIR-based data publishing, and study approvals. Validated across NSCLC, HNC & SBRT clinical use cases.',
     tags: ['Python', 'Django', 'PostgreSQL', 'Celery', 'Federated ML', 'RBAC'],
     link: 'https://trumpetproject.eu',
   },
